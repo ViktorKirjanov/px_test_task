@@ -6,18 +6,22 @@ class CustomTheme {
   static const Color white = Color.fromRGBO(255, 255, 255, 1);
   static const Color grey1 = Color.fromRGBO(231, 233, 234, 1);
   static const Color grey2 = Color.fromRGBO(184, 189, 191, 1);
-  static const Color black3 = Color.fromRGBO(14, 28, 33, 1);
+  static const Color grey3 = Color.fromRGBO(137, 145, 148, 1);
+  static const Color black1 = Color.fromRGBO(18, 35, 41, 1);
+  static const Color black2 = Color.fromRGBO(14, 28, 33, 1);
+  static const Color black3 = Color.fromRGBO(11, 21, 25, 1);
   static const Color red = Color.fromARGB(255, 195, 70, 61);
-  static const Color systemError = Color.fromRGBO(255, 31, 11, 1);
+  static const Color error = Color.fromRGBO(255, 31, 11, 1);
 
   static const appBarElevation = 0.0;
+  static const bottomNavigationBarElevation = 0.0;
   static const buttonHeight = 56.0;
   static const borderRadius = BorderRadius.all(Radius.circular(6.0));
   static const contentPadding = EdgeInsets.all(16.0);
 
   static final darkTheme = ThemeData(
     fontFamily: 'EBGaramond',
-    scaffoldBackgroundColor: black3,
+    scaffoldBackgroundColor: black2,
     textTheme: const TextTheme(
       bodyText1: TextStyle(),
       bodyText2: TextStyle(),
@@ -28,12 +32,36 @@ class CustomTheme {
       bodyColor: grey1,
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: black3,
-      foregroundColor: black3,
+      backgroundColor: black2,
+      foregroundColor: grey1,
+      toolbarHeight: 72.0,
+      titleTextStyle: TextStyle(
+        fontWeight: FontWeight.w500,
+        fontFamily: 'EBGaramond',
+        fontSize: 32.0,
+      ),
       iconTheme: IconThemeData(
         color: grey1,
       ),
       elevation: appBarElevation,
+    ),
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+      backgroundColor: CustomTheme.black3,
+      unselectedItemColor: CustomTheme.grey3,
+      selectedItemColor: CustomTheme.white,
+      elevation: bottomNavigationBarElevation,
+      selectedLabelStyle: TextStyle(
+        fontFamily: 'Lato',
+        color: CustomTheme.white,
+        fontSize: 12.0,
+        fontWeight: FontWeight.w400,
+      ),
+      unselectedLabelStyle: TextStyle(
+        fontFamily: 'Lato',
+        color: CustomTheme.grey3,
+        fontSize: 12.0,
+        fontWeight: FontWeight.w400,
+      ),
     ),
     inputDecorationTheme: const InputDecorationTheme(
       border: UnderlineInputBorder(
