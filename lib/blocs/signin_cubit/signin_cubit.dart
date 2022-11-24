@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
 
-import '../../data/errors/authentication_exceptions.dart';
+import '../../data/errors/exceptions.dart';
 import '../../data/repository/authentication_repository.dart';
 import '../../utils/form_inputs/email.dart';
 import '../../utils/form_inputs/password.dart';

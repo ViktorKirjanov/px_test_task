@@ -5,3 +5,5 @@ class LogInWithEmailAndPasswordException implements Exception {
     this.message = 'An unknown exception occurred.',
   });
 }
+
+class ServerException implements Exception {}

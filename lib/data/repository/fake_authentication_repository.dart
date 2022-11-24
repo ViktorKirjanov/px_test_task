@@ -1,4 +1,4 @@
-import '../errors/authentication_exceptions.dart';
+import '../errors/exceptions.dart';
 import 'authentication_repository.dart';
 
 class FakeAuthenticationRepository implements AuthenticationRepository {
