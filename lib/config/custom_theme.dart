@@ -15,9 +15,15 @@ class CustomTheme {
 
   static const appBarElevation = 0.0;
   static const bottomNavigationBarElevation = 0.0;
+
   static const buttonHeight = 56.0;
   static const borderRadius = BorderRadius.all(Radius.circular(6.0));
   static const contentPadding = EdgeInsets.all(16.0);
+
+  /// collection
+  static const productItemsInRow = 2;
+  static const productGridSpacing = 8.0;
+  static const productItemHeight = 313.0;
 
   static final darkTheme = ThemeData(
     fontFamily: 'EBGaramond',
@@ -97,5 +103,9 @@ class CustomTheme {
       primary: primary,
       secondary: primary,
     ),
+  );
+
+  static const primaryText = TextStyle(
+    color: CustomTheme.primary,
   );
 }
