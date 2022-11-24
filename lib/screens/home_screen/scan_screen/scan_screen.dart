@@ -7,7 +7,7 @@ class ScanScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        "Scan screen",
+        "Scan view",
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.w500,

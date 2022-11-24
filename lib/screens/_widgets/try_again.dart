@@ -22,7 +22,11 @@ class Refresh extends StatelessWidget {
         children: [
           Text(
             message,
-            style: CustomTheme.primaryText,
+            style: const TextStyle(
+              color: CustomTheme.grey1,
+              fontWeight: FontWeight.w500,
+              fontSize: 22,
+            ),
           ),
           const SizedBox(height: 16.0),
           PrimaryButton(

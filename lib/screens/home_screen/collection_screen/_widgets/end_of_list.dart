@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../config/custom_theme.dart';
+import '../../../../config/custom_theme.dart';
 
 class EndOfList extends StatelessWidget {
   const EndOfList({super.key});
@@ -14,7 +14,11 @@ class EndOfList extends StatelessWidget {
         child: const Center(
           child: Text(
             'No more products',
-            style: CustomTheme.primaryText,
+            style: TextStyle(
+              color: CustomTheme.grey1,
+              fontWeight: FontWeight.w500,
+              fontSize: 22,
+            ),
           ),
         ),
       ),

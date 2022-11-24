@@ -22,8 +22,10 @@ class FakeProductRepository implements ProductRepository {
         final randCode = 1111 + rnd.nextInt(9999 - 1111);
         products.add(
           Product(
-            name: 'Springbank $randYear #$randCode',
-            code: '(112/158)',
+            name: 'Springbank',
+            year: randYear,
+            code: randCode,
+            bottle: '(112/158)',
             image: 'assets/images/one_cask.png',
           ),
         );

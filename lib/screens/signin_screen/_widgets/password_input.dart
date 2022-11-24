@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../../blocs/simlpe_switch_cubit/simlpe_switch_cubit.dart';
 import '../../../config/custom_theme.dart';
+import '../../_widgets/svg_icon.dart';
 
 class PasswordInput extends StatefulWidget {
   final String? labelText;
@@ -37,22 +37,9 @@ class _PasswordInputState extends State<PasswordInput> {
               child: Container(
                 width: 50.0,
                 padding: const EdgeInsets.only(right: 8.0),
-                color: Colors.transparent,
-                child: Container(
-                  color: Colors.transparent,
-                  child: Center(
-                    child: SizedBox(
-                      height: 24.0,
-                      width: 24.0,
-                      child: SvgPicture.asset(
-                        state
-                            ? 'assets/svg/eye_crossed.svg'
-                            : 'assets/svg/eye.svg',
-                        color: CustomTheme.secondary,
-                        semanticsLabel: 'A red up arrow',
-                      ),
-                    ),
-                  ),
+                child: SvgIcon(
+                  name: state ? 'eye_crossed' : 'eye',
+                  color: CustomTheme.secondary,
                 ),
               ),
               onTap: () => _simlpeSwitchCubit.onSwitch(),

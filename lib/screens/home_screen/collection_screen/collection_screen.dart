@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../blocs/products_bloc/products_bloc.dart';
-import '../../../../config/custom_theme.dart';
-import '../../../../data/repository/product_repository.dart';
-import '../../../_widgets/try_again.dart';
-import '../../../product_screen/product_screen.dart';
+import '../../../blocs/products_bloc/products_bloc.dart';
+import '../../../config/custom_theme.dart';
+import '../../../data/repository/product_repository.dart';
+import '../../_widgets/try_again.dart';
+import '../../product_screen/product_screen.dart';
 import '_widgets/end_of_list.dart';
 import '_widgets/notification_bell.dart';
 import '_widgets/pagination_loader.dart';
-import '_widgets/product_item.dart';
+import '_widgets/product_card.dart';
 
 class CollectionScreen extends StatelessWidget {
   const CollectionScreen({super.key});
@@ -71,13 +71,13 @@ class CollectionView extends StatelessWidget {
                                 .add(const GetProductsEvent(null));
                           }
                         }
-                        return ProductItem(
+                        return ProductCard(
                           product: state.products[index],
                           onTap: () =>
                               Navigator.of(context, rootNavigator: true).push(
                             MaterialPageRoute<bool>(
                               builder: (BuildContext context) =>
-                                  const ProductScreen(),
+                                  ProductScreen(product: state.products[index]),
                             ),
                           ),
                         );
@@ -101,7 +101,7 @@ class CollectionView extends StatelessWidget {
           );
         } else if (state is ErrorProductsState) {
           return Refresh(
-            message: 'Something went wrong, please try again.',
+            message: 'Something went wrong.',
             onPressed: () => BlocProvider.of<ProductsBloc>(context)
                 .add(const GetProductsEvent(1)),
           );

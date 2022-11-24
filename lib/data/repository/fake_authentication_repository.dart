@@ -1,3 +1,5 @@
+import 'package:px_test_task/config/consts.dart';
+
 import '../errors/exceptions.dart';
 import 'authentication_repository.dart';
 
@@ -11,7 +13,7 @@ class FakeAuthenticationRepository implements AuthenticationRepository {
     required String password,
   }) async {
     await Future.delayed(const Duration(milliseconds: 500));
-    if (email != 'email@email.com' || password != '123123xX!') {
+    if (email != FakeSignIn.email || password != FakeSignIn.password) {
       throw const LogInWithEmailAndPasswordException(
         message: 'Wront email or password',
       );
