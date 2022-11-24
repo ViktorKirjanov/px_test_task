@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:px_test_task/screens/signin_screen/signin_screen.dart';
 
 import 'blocs/bloc_observer.dart';
 import 'config/custom_theme.dart';
@@ -7,7 +8,6 @@ import 'data/repository/authentication_repository.dart';
 import 'data/repository/fake_authentication_repository.dart';
 import 'data/repository/fake_product_repository.dart';
 import 'data/repository/product_repository.dart';
-import 'screens/home_screen/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,7 +45,7 @@ class App extends StatelessWidget {
         title: 'PX',
         themeMode: ThemeMode.dark,
         theme: CustomTheme.darkTheme,
-        home: const HomeScreen(),
+        home: const SignInScreen(),
       ),
     );
   }

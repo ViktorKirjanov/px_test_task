@@ -25,7 +25,6 @@ class SignInForm extends StatelessWidget {
                 state.errorMessage ?? 'Something went wrong, please try again.',
           );
         } else if (state.status.isSubmissionSuccess) {
-          // TODO: add routing
           Navigator.of(
             context,
             rootNavigator: true,

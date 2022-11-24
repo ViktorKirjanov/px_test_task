@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_svg/svg.dart';
 
-import '../../../../../config/custom_theme.dart';
+import '../../../../config/custom_theme.dart';
+import '../../../_widgets/svg_icon.dart';
 
 class NotificationBell extends StatelessWidget {
   const NotificationBell({super.key});
@@ -16,8 +16,8 @@ class NotificationBell extends StatelessWidget {
         child: Center(
           child: Stack(
             children: [
-              SvgPicture.asset(
-                'assets/svg/bell.svg',
+              const SvgIcon(
+                name: 'bell',
                 color: CustomTheme.white,
               ),
               Positioned(

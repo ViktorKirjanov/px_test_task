@@ -11,7 +11,13 @@ class MockStoneRepository extends Mock implements ProductRepository {}
 
 void main() {
   const products = [
-    Product(name: 'name 1', code: 'code 1', image: 'image.png'),
+    Product(
+      name: 'name 1',
+      year: 2000,
+      code: 12345,
+      bottle: '(123/456)',
+      image: 'image.png',
+    ),
   ];
 
   group('ProductsBloc', () {

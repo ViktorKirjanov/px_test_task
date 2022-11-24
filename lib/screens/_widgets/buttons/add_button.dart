@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 import '../../../config/custom_theme.dart';
+import '../svg_icon.dart';
 
-class PrimaryButton extends StatelessWidget {
-  final String title;
+class AddButton extends StatelessWidget {
   final bool active;
   final Function? onPressed;
 
-  const PrimaryButton({
+  const AddButton({
     Key? key,
-    required this.title,
     this.active = true,
     required this.onPressed,
   }) : super(key: key);
@@ -17,10 +16,12 @@ class PrimaryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: CustomTheme.buttonHeight,
-      width: double.infinity,
+      height: CustomTheme.addButtonHeight,
+      // width: double.infinity,
       child: TextButton(
         style: ButtonStyle(
+          padding: MaterialStateProperty.all<EdgeInsets>(
+              const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             const RoundedRectangleBorder(
               borderRadius: CustomTheme.borderRadius,
@@ -37,14 +38,23 @@ class PrimaryButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed != null ? () => onPressed!() : null,
-        child: Text(
-          title,
-          textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontSize: 16.0,
-            fontWeight: FontWeight.w600,
-            height: 1.5,
-          ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: const [
+            SvgIcon(
+              name: 'plus',
+              color: CustomTheme.black3,
+            ),
+            SizedBox(width: 8.0),
+            Text(
+              'Add to my collection',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
         ),
       ),
     );

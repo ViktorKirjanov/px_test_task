@@ -17,8 +17,12 @@ class CustomTheme {
   static const bottomNavigationBarElevation = 0.0;
 
   static const buttonHeight = 56.0;
+  static const addButtonHeight = 40.0;
   static const borderRadius = BorderRadius.all(Radius.circular(6.0));
   static const contentPadding = EdgeInsets.all(16.0);
+
+  static Color splashColor = secondary.withOpacity(.5);
+  static Color highlightColor = secondary.withOpacity(.1);
 
   /// collection
   static const productItemsInRow = 2;
@@ -83,10 +87,11 @@ class CustomTheme {
         borderSide: BorderSide(color: primary),
       ),
       errorBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: red),
+        borderSide: BorderSide(color: error),
       ),
       errorStyle: TextStyle(
-        color: red,
+        color: error,
+        fontSize: 12.0,
       ),
       errorMaxLines: 2,
       labelStyle: TextStyle(
@@ -103,9 +108,5 @@ class CustomTheme {
       primary: primary,
       secondary: primary,
     ),
-  );
-
-  static const primaryText = TextStyle(
-    color: CustomTheme.primary,
   );
 }

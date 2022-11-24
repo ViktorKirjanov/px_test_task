@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../../config/custom_theme.dart';
 import '../../../../../models/product_model.dart';
 
-class ProductItem extends StatelessWidget {
+class ProductCard extends StatelessWidget {
   final Product product;
   final Function onTap;
 
-  const ProductItem({
+  const ProductCard({
     super.key,
     required this.product,
     required this.onTap,
@@ -18,8 +18,8 @@ class ProductItem extends StatelessWidget {
     return Material(
       color: CustomTheme.black1,
       child: InkWell(
-        splashColor: CustomTheme.secondary.withOpacity(.5),
-        highlightColor: CustomTheme.secondary.withOpacity(.1),
+        splashColor: CustomTheme.splashColor,
+        highlightColor: CustomTheme.highlightColor,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
           child: Column(
@@ -36,7 +36,7 @@ class ProductItem extends StatelessWidget {
               ),
               const SizedBox(height: 16.0),
               Text(
-                product.name,
+                '${product.name} ${product.year} #${product.code}',
                 style: const TextStyle(
                   fontSize: 22.0,
                   fontWeight: FontWeight.w500,
@@ -45,7 +45,7 @@ class ProductItem extends StatelessWidget {
               ),
               const SizedBox(height: 4.0),
               Text(
-                product.code,
+                product.bottle,
                 style: const TextStyle(
                   fontFamily: 'Lato',
                   fontSize: 12.0,
