@@ -18,7 +18,7 @@ class ProductDetails extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: CustomTheme.contentPadding,
         width: double.infinity,
         color: CustomTheme.black1,
         child: Column(

@@ -16,7 +16,7 @@ class Refresh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: CustomTheme.contentPadding,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
