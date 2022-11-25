@@ -27,7 +27,9 @@ class ProductGroupsState extends State<ProductGroups> {
         padding: const EdgeInsets.all(2.0),
         decoration: const BoxDecoration(
           color: CustomTheme.black3,
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: BorderRadius.all(
+            Radius.circular(CustomTheme.smallSpacing),
+          ),
         ),
         child: Row(
           children: <Widget>[
@@ -69,11 +71,11 @@ class _GroupButton extends StatelessWidget {
     return Expanded(
       child: Material(
         color: isSelectd ? CustomTheme.primary : Colors.transparent,
-        borderRadius: const BorderRadius.all(Radius.circular(6.0)),
+        borderRadius: CustomTheme.borderRadius,
         child: InkWell(
           splashColor: CustomTheme.splashColor,
           highlightColor: CustomTheme.highlightColor,
-          borderRadius: const BorderRadius.all(Radius.circular(6.0)),
+          borderRadius: CustomTheme.borderRadius,
           child: Container(
             alignment: Alignment.center,
             child: Text(

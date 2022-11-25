@@ -36,7 +36,9 @@ class _PasswordInputState extends State<PasswordInput> {
             suffixIcon: GestureDetector(
               child: Container(
                 width: 50.0,
-                padding: const EdgeInsets.only(right: 8.0),
+                padding: const EdgeInsets.only(
+                  right: CustomTheme.smallSpacing,
+                ),
                 child: SvgIcon(
                   name: state ? 'eye_crossed' : 'eye',
                   color: CustomTheme.secondary,

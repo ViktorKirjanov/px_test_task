@@ -61,7 +61,7 @@ class CollectionView extends StatelessWidget {
             child: CustomScrollView(
               slivers: [
                 SliverPadding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: CustomTheme.contentPadding,
                   sliver: SliverGrid(
                     delegate: SliverChildBuilderDelegate(
                       (context, index) {

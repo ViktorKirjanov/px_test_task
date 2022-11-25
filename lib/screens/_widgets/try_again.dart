@@ -16,7 +16,7 @@ class Refresh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: CustomTheme.contentPadding,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -28,7 +28,7 @@ class Refresh extends StatelessWidget {
               fontSize: 22,
             ),
           ),
-          const SizedBox(height: 16.0),
+          const SizedBox(height: CustomTheme.mediumSpacing),
           PrimaryButton(
             title: 'Refresh',
             onPressed: () => onPressed(),

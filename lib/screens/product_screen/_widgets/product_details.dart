@@ -16,9 +16,11 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: CustomTheme.mediumSpacing,
+      ),
       child: Container(
-        padding: const EdgeInsets.all(16.0),
+        padding: CustomTheme.contentPadding,
         width: double.infinity,
         color: CustomTheme.black1,
         child: Column(
@@ -34,7 +36,7 @@ class ProductDetails extends StatelessWidget {
                 height: 1.33,
               ),
             ),
-            const SizedBox(height: 8.0),
+            const SizedBox(height: CustomTheme.smallSpacing),
             RichText(
               text: TextSpan(
                 text: '${product.name} ',
@@ -56,9 +58,9 @@ class ProductDetails extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 24.0),
+            const SizedBox(height: CustomTheme.largeSpacing),
             const ProductGroups(),
-            const SizedBox(height: 24.0),
+            const SizedBox(height: CustomTheme.largeSpacing),
             const DetailsRow(
               title: 'Distillery',
               text: 'Text',
