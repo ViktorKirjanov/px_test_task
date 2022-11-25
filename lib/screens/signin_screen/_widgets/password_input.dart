@@ -37,7 +37,7 @@ class _PasswordInputState extends State<PasswordInput> {
               child: Container(
                 width: 50.0,
                 padding: const EdgeInsets.only(
-                  right: CustomTheme.secondarySpacing,
+                  right: CustomTheme.smallSpacing,
                 ),
                 child: SvgIcon(
                   name: state ? 'eye_crossed' : 'eye',

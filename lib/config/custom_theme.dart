@@ -18,17 +18,20 @@ class CustomTheme {
 
   static const buttonHeight = 56.0;
   static const addButtonHeight = 40.0;
-  static const primarySpacing = 16.0;
-  static const secondarySpacing = 8.0;
+
+  static const smallSpacing = 8.0;
+  static const mediumSpacing = 16.0;
+  static const largeSpacing = 24.0;
+
   static const borderRadius = BorderRadius.all(Radius.circular(6.0));
-  static const contentPadding = EdgeInsets.all(primarySpacing);
+  static const contentPadding = EdgeInsets.all(mediumSpacing);
 
   static Color splashColor = secondary.withOpacity(.5);
   static Color highlightColor = secondary.withOpacity(.1);
 
   /// collection
   static const productItemsInRow = 2;
-  static const productGridSpacing = secondarySpacing;
+  static const productGridSpacing = smallSpacing;
   static const productItemHeight = 313.0;
 
   static final darkTheme = ThemeData(

@@ -17,7 +17,7 @@ class ProductDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: CustomTheme.primarySpacing,
+        horizontal: CustomTheme.mediumSpacing,
       ),
       child: Container(
         padding: CustomTheme.contentPadding,
@@ -36,7 +36,7 @@ class ProductDetails extends StatelessWidget {
                 height: 1.33,
               ),
             ),
-            const SizedBox(height: CustomTheme.secondarySpacing),
+            const SizedBox(height: CustomTheme.smallSpacing),
             RichText(
               text: TextSpan(
                 text: '${product.name} ',
@@ -58,9 +58,9 @@ class ProductDetails extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 24.0),
+            const SizedBox(height: CustomTheme.largeSpacing),
             const ProductGroups(),
-            const SizedBox(height: 24.0),
+            const SizedBox(height: CustomTheme.largeSpacing),
             const DetailsRow(
               title: 'Distillery',
               text: 'Text',

@@ -10,7 +10,7 @@ class CustomAppbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(
-        horizontal: CustomTheme.primarySpacing,
+        horizontal: CustomTheme.mediumSpacing,
       ),
       height: 72.0,
       child: Row(
@@ -18,8 +18,8 @@ class CustomAppbar extends StatelessWidget {
         children: [
           Container(
             padding: const EdgeInsets.symmetric(
-              vertical: CustomTheme.secondarySpacing / 2,
-              horizontal: CustomTheme.secondarySpacing,
+              vertical: CustomTheme.smallSpacing / 2,
+              horizontal: CustomTheme.smallSpacing,
             ),
             color: CustomTheme.black3,
             child: const Text(

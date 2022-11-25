@@ -10,21 +10,21 @@ class ProductStatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        horizontal: CustomTheme.primarySpacing,
+        horizontal: CustomTheme.mediumSpacing,
       ),
       child: Container(
         color: CustomTheme.black3,
         height: 40.0,
         child: Padding(
-          padding: const EdgeInsets.all(CustomTheme.secondarySpacing),
+          padding: const EdgeInsets.all(CustomTheme.smallSpacing),
           child: Row(
             children: [
               SizedBox(
-                height: 24.0,
-                width: 23.0,
+                height: CustomTheme.largeSpacing,
+                width: CustomTheme.largeSpacing - 1,
                 child: Image.asset("assets/images/genuine-icon.png"),
               ),
-              const SizedBox(width: CustomTheme.secondarySpacing),
+              const SizedBox(width: CustomTheme.smallSpacing),
               const Text(
                 'Genuine Bottle (Unopened)',
                 style: TextStyle(

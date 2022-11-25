@@ -9,7 +9,7 @@ class PaginationLoader extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        padding: const EdgeInsets.only(bottom: CustomTheme.primarySpacing),
+        padding: const EdgeInsets.only(bottom: CustomTheme.mediumSpacing),
         height: 75.0,
         child: const Center(
           child: CircularProgressIndicator(),

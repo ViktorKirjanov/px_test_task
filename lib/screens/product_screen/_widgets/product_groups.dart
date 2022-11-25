@@ -28,7 +28,7 @@ class ProductGroupsState extends State<ProductGroups> {
         decoration: const BoxDecoration(
           color: CustomTheme.black3,
           borderRadius: BorderRadius.all(
-            Radius.circular(CustomTheme.secondarySpacing),
+            Radius.circular(CustomTheme.smallSpacing),
           ),
         ),
         child: Row(

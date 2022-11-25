@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:px_test_task/config/custom_theme.dart';
 
 class SvgIcon extends StatelessWidget {
   final String name;
@@ -14,8 +15,8 @@ class SvgIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 24.0,
-      width: 24.0,
+      height: CustomTheme.largeSpacing,
+      width: CustomTheme.largeSpacing,
       child: Center(
         child: SvgPicture.asset(
           'assets/svg/$name.svg',

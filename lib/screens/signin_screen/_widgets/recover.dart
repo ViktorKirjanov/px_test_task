@@ -18,10 +18,10 @@ class Recover extends StatelessWidget {
             color: CustomTheme.grey2,
           ),
         ),
-        const SizedBox(width: CustomTheme.secondarySpacing),
+        const SizedBox(width: CustomTheme.smallSpacing),
         Container(
           padding: const EdgeInsets.symmetric(
-            horizontal: CustomTheme.primarySpacing,
+            horizontal: CustomTheme.mediumSpacing,
           ),
           height: 40.0,
           child: const Center(

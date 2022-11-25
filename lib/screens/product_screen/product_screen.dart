@@ -45,7 +45,7 @@ class ProductScreen extends StatelessWidget {
                     ProductDetails(product: product),
                     const SizedBox(height: 40.0),
                     AddButton(onPressed: () {}),
-                    const SizedBox(height: CustomTheme.primarySpacing),
+                    const SizedBox(height: CustomTheme.mediumSpacing),
                   ],
                 ),
               ),

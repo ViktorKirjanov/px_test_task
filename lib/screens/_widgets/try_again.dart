@@ -28,7 +28,7 @@ class Refresh extends StatelessWidget {
               fontSize: 22,
             ),
           ),
-          const SizedBox(height: CustomTheme.primarySpacing),
+          const SizedBox(height: CustomTheme.mediumSpacing),
           PrimaryButton(
             title: 'Refresh',
             onPressed: () => onPressed(),
