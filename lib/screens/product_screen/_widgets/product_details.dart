@@ -16,7 +16,9 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: CustomTheme.primarySpacing,
+      ),
       child: Container(
         padding: CustomTheme.contentPadding,
         width: double.infinity,
@@ -34,7 +36,7 @@ class ProductDetails extends StatelessWidget {
                 height: 1.33,
               ),
             ),
-            const SizedBox(height: 8.0),
+            const SizedBox(height: CustomTheme.secondarySpacing),
             RichText(
               text: TextSpan(
                 text: '${product.name} ',

@@ -9,7 +9,7 @@ class EndOfList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        padding: const EdgeInsets.only(bottom: 16.0),
+        padding: const EdgeInsets.only(bottom: CustomTheme.primarySpacing),
         height: 75.0,
         child: const Center(
           child: Text(

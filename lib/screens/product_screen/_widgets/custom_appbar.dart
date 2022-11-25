@@ -9,15 +9,17 @@ class CustomAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(
+        horizontal: CustomTheme.primarySpacing,
+      ),
       height: 72.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             padding: const EdgeInsets.symmetric(
-              vertical: 4.0,
-              horizontal: 8.0,
+              vertical: CustomTheme.secondarySpacing / 2,
+              horizontal: CustomTheme.secondarySpacing,
             ),
             color: CustomTheme.black3,
             child: const Text(

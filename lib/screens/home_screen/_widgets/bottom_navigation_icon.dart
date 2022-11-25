@@ -16,7 +16,7 @@ class BottomNavigationIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
+      padding: const EdgeInsets.only(bottom: CustomTheme.secondarySpacing),
       child: SizedBox(
         height: 24.0,
         width: 24.0,

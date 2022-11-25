@@ -24,8 +24,8 @@ class NotificationBell extends StatelessWidget {
                 right: .0,
                 bottom: 2.0,
                 child: Container(
-                  height: 8.0,
-                  width: 8.0,
+                  height: CustomTheme.secondarySpacing,
+                  width: CustomTheme.secondarySpacing,
                   decoration: BoxDecoration(
                     color: CustomTheme.error,
                     shape: BoxShape.circle,

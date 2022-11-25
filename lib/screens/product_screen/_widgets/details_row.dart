@@ -17,7 +17,9 @@ class DetailsRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: hasBottomPadding ? 16.0 : 0.0),
+      padding: EdgeInsets.only(
+        bottom: hasBottomPadding ? CustomTheme.primarySpacing : 0.0,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

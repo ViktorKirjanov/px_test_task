@@ -26,7 +26,12 @@ class ProductCard extends StatelessWidget {
           duration: 300,
           curve: Curves.easeIn,
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0.0),
+            padding: const EdgeInsets.fromLTRB(
+              CustomTheme.primarySpacing,
+              CustomTheme.primarySpacing,
+              CustomTheme.primarySpacing,
+              0.0,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -39,7 +44,7 @@ class ProductCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 16.0),
+                const SizedBox(height: CustomTheme.primarySpacing),
                 Text(
                   '${product.name} ${product.year} #${product.code}',
                   style: const TextStyle(

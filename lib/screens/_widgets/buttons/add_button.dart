@@ -21,7 +21,11 @@ class AddButton extends StatelessWidget {
       child: TextButton(
         style: ButtonStyle(
           padding: MaterialStateProperty.all<EdgeInsets>(
-              const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0)),
+            const EdgeInsets.symmetric(
+              horizontal: CustomTheme.primarySpacing,
+              vertical: CustomTheme.secondarySpacing,
+            ),
+          ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             const RoundedRectangleBorder(
               borderRadius: CustomTheme.borderRadius,
@@ -45,7 +49,7 @@ class AddButton extends StatelessWidget {
               name: 'plus',
               color: CustomTheme.black3,
             ),
-            SizedBox(width: 8.0),
+            SizedBox(width: CustomTheme.secondarySpacing),
             Text(
               'Add to my collection',
               textAlign: TextAlign.center,
