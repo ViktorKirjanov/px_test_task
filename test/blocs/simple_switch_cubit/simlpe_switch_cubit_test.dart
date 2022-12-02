@@ -4,7 +4,7 @@ import 'package:px_test_task/blocs/simlpe_switch_cubit/simlpe_switch_cubit.dart'
 
 void main() {
   group('SimlpeSwitchCubit.', () {
-    late SimlpeSwitchCubit cubit = SimlpeSwitchCubit();
+    final SimlpeSwitchCubit cubit = SimlpeSwitchCubit();
 
     test('initial state is true', () {
       expect(
@@ -16,7 +16,7 @@ void main() {
     blocTest<SimlpeSwitchCubit, bool>(
       'emits false onSwitch. ',
       build: () => cubit,
-      act: (cubit) => cubit.onSwitch(),
+      act: (SimlpeSwitchCubit cubit) => cubit.onSwitch(),
       expect: () => <bool>[false],
     );
   });

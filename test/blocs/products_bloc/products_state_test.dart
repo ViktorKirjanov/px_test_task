@@ -21,23 +21,26 @@ void main() {
       test('supports value comparison', () {
         final products = [
           Product(
-              name: 'name 1',
-              year: 2000,
-              code: 12345,
-              bottle: '(123/456)',
-              image: 'image.png'),
+            name: 'name 1',
+            year: 2000,
+            code: 12345,
+            bottle: '(123/456)',
+            image: 'image.png',
+          ),
           Product(
-              name: 'name 2',
-              year: 2000,
-              code: 12345,
-              bottle: '(123/456)',
-              image: 'image.png'),
+            name: 'name 2',
+            year: 2000,
+            code: 12345,
+            bottle: '(123/456)',
+            image: 'image.png',
+          ),
           Product(
-              name: 'name 3',
-              year: 2000,
-              code: 12345,
-              bottle: '(123/456)',
-              image: 'image.png'),
+            name: 'name 3',
+            year: 2000,
+            code: 12345,
+            bottle: '(123/456)',
+            image: 'image.png',
+          ),
         ];
         expect(
           CompleteProductsState(products, 1, false),

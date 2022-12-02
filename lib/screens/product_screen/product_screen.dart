@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-
-import '../../config/custom_theme.dart';
-import '../../models/product_model.dart';
-import '../_widgets/buttons/add_button.dart';
-import '_widgets/custom_appbar.dart';
-import '_widgets/product_details.dart';
-import '_widgets/product_image.dart';
-import '_widgets/product_options.dart';
+import 'package:px_test_task/config/custom_theme.dart';
+import 'package:px_test_task/models/product_model.dart';
+import 'package:px_test_task/screens/_widgets/buttons/add_button.dart';
+import 'package:px_test_task/screens/product_screen/_widgets/custom_appbar.dart';
+import 'package:px_test_task/screens/product_screen/_widgets/product_details.dart';
+import 'package:px_test_task/screens/product_screen/_widgets/product_image.dart';
+import 'package:px_test_task/screens/product_screen/_widgets/product_options.dart';
 
 class ProductScreen extends StatelessWidget {
-  final Product product;
-
   const ProductScreen({
     super.key,
     required this.product,
   });
 
+  final Product product;
+
   @override
   Widget build(BuildContext context) {
-    var minHeight = MediaQuery.of(context).size.height;
+    final minHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: CustomTheme.black3,
@@ -31,9 +30,10 @@ class ProductScreen extends StatelessWidget {
               ),
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                    image: AssetImage("assets/images/bg.jpg"),
-                    fit: BoxFit.fitWidth,
-                    alignment: Alignment.topCenter),
+                  image: AssetImage('assets/images/bg.jpg'),
+                  fit: BoxFit.fitWidth,
+                  alignment: Alignment.topCenter,
+                ),
               ),
               child: SafeArea(
                 child: Column(

@@ -27,9 +27,7 @@ void main() {
       productRepository = MockStoneRepository();
     });
 
-    ProductsBloc buildBloc() {
-      return ProductsBloc(productRepository);
-    }
+    ProductsBloc buildBloc() => ProductsBloc(productRepository);
 
     group('constructor', () {
       test('works properly', () {
@@ -55,7 +53,7 @@ void main() {
           );
         },
         build: buildBloc,
-        act: (bloc) async {
+        act: (ProductsBloc bloc) async {
           bloc.add(const GetProductsEvent(1));
         },
         expect: () => [
@@ -67,25 +65,26 @@ void main() {
       );
 
       blocTest<ProductsBloc, ProductsState>(
-          'emits CompleteProductsState with products',
-          setUp: () {
-            when(
-              () => productRepository.getProducts(page: 1),
-            ).thenAnswer(
-              (_) async => Future.value(products),
-            );
-          },
-          build: buildBloc,
-          act: (bloc) async {
-            bloc.add(const GetProductsEvent(1));
-          },
-          expect: () => [
-                LoadingProductsState(),
-                CompleteProductsState(products, 2, false),
-              ],
-          verify: (_) {
-            verify(() => productRepository.getProducts(page: 1)).called(1);
-          });
+        'emits CompleteProductsState with products',
+        setUp: () {
+          when(
+            () => productRepository.getProducts(page: 1),
+          ).thenAnswer(
+            (_) async => Future.value(products),
+          );
+        },
+        build: buildBloc,
+        act: (ProductsBloc bloc) async {
+          bloc.add(const GetProductsEvent(1));
+        },
+        expect: () => [
+          LoadingProductsState(),
+          CompleteProductsState(products, 2, false),
+        ],
+        verify: (_) {
+          verify(() => productRepository.getProducts(page: 1)).called(1);
+        },
+      );
 
       blocTest<ProductsBloc, ProductsState>(
         'emits ErrorStonesState',
@@ -95,7 +94,7 @@ void main() {
           ).thenThrow(Exception());
         },
         build: buildBloc,
-        act: (bloc) async {
+        act: (ProductsBloc bloc) async {
           bloc.add(const GetProductsEvent(1));
         },
         expect: () => [

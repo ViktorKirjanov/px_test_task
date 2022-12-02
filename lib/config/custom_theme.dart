@@ -26,8 +26,8 @@ class CustomTheme {
   static const borderRadius = BorderRadius.all(Radius.circular(6.0));
   static const contentPadding = EdgeInsets.all(mediumSpacing);
 
-  static Color splashColor = secondary.withOpacity(.5);
-  static Color highlightColor = secondary.withOpacity(.1);
+  static final Color splashColor = secondary.withOpacity(.5);
+  static final Color highlightColor = secondary.withOpacity(.1);
 
   /// collection
   static const productItemsInRow = 2;
