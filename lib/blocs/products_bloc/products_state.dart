@@ -12,11 +12,11 @@ class InitialProductsState extends ProductsState {}
 class LoadingProductsState extends ProductsState {}
 
 class CompleteProductsState extends ProductsState {
+  const CompleteProductsState(this.products, this.page, this.hasMorePages);
+
   final List<Product> products;
   final int page;
   final bool hasMorePages;
-
-  const CompleteProductsState(this.products, this.page, this.hasMorePages);
 
   @override
   List<Object> get props => [products, page, hasMorePages];

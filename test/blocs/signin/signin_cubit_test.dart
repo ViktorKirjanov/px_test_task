@@ -41,7 +41,7 @@ void main() {
       blocTest<SignInCubit, SignInState>(
         'emits [invalid] when email/password are invalid. ',
         build: () => signInCubit,
-        act: (cubit) => cubit.emailChanged(invalidEmail),
+        act: (SignInCubit cubit) => cubit.emailChanged(invalidEmail),
         expect: () => <SignInState>[
           SignInState(
             email: Email.dirty(invalidEmail),
@@ -54,7 +54,7 @@ void main() {
         'emits [valid] when email/password are valid',
         build: () => signInCubit,
         seed: () => SignInState(password: Password.dirty(validPassword)),
-        act: (cubit) => cubit.emailChanged(validEmail),
+        act: (SignInCubit cubit) => cubit.emailChanged(validEmail),
         expect: () => <SignInState>[
           SignInState(
             email: Email.dirty(validEmail),
@@ -69,7 +69,7 @@ void main() {
       blocTest<SignInCubit, SignInState>(
         'emits [invalid] when email/password are invalid',
         build: () => signInCubit,
-        act: (cubit) => cubit.passwordChanged(invalidPassword),
+        act: (SignInCubit cubit) => cubit.passwordChanged(invalidPassword),
         expect: () => <SignInState>[
           SignInState(
             password: Password.dirty(invalidPassword),
@@ -82,7 +82,7 @@ void main() {
         'emits [valid] when email/password are valid',
         build: () => signInCubit,
         seed: () => SignInState(email: Email.dirty(validEmail)),
-        act: (cubit) => cubit.passwordChanged(validPassword),
+        act: (SignInCubit cubit) => cubit.passwordChanged(validPassword),
         expect: () => <SignInState>[
           SignInState(
             email: Email.dirty(validEmail),
@@ -97,7 +97,7 @@ void main() {
       blocTest<SignInCubit, SignInState>(
         'Does nothing when status is not validated',
         build: () => signInCubit,
-        act: (cubit) => cubit.logInWithCredentials(),
+        act: (SignInCubit cubit) => cubit.logInWithCredentials(),
         expect: () => <SignInState>[],
       );
 
@@ -109,7 +109,7 @@ void main() {
           email: Email.dirty(validEmail),
           password: Password.dirty(validPassword),
         ),
-        act: (cubit) => cubit.logInWithCredentials(),
+        act: (SignInCubit cubit) => cubit.logInWithCredentials(),
         verify: (_) {
           verify(
             () => authenticationRepository.logInWithEmailAndPassword(
@@ -137,7 +137,7 @@ void main() {
           email: Email.dirty(validEmail),
           password: Password.dirty(validPassword),
         ),
-        act: (cubit) => cubit.logInWithCredentials(),
+        act: (SignInCubit cubit) => cubit.logInWithCredentials(),
         expect: () => <SignInState>[
           SignInState(
             status: FormzStatus.submissionInProgress,

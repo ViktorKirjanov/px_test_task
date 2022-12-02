@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../config/custom_theme.dart';
+import 'package:px_test_task/config/custom_theme.dart';
 
 class PrimaryLoadingButton extends StatelessWidget {
   const PrimaryLoadingButton({
@@ -8,33 +7,31 @@ class PrimaryLoadingButton extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: CustomTheme.buttonHeight,
-      width: double.infinity,
-      child: TextButton(
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            const RoundedRectangleBorder(
-              borderRadius: CustomTheme.borderRadius,
+  Widget build(BuildContext context) => SizedBox(
+        height: CustomTheme.buttonHeight,
+        width: double.infinity,
+        child: TextButton(
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              const RoundedRectangleBorder(
+                borderRadius: CustomTheme.borderRadius,
+              ),
+            ),
+            backgroundColor: MaterialStateProperty.all(
+              CustomTheme.primary,
+            ),
+            overlayColor: MaterialStateProperty.all(
+              CustomTheme.primary,
+            ),
+            foregroundColor: MaterialStateProperty.all(
+              CustomTheme.black3,
             ),
           ),
-          backgroundColor: MaterialStateProperty.all(
-            CustomTheme.primary,
+          child: const CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation<Color>(CustomTheme.black3),
+            strokeWidth: 2.5,
           ),
-          overlayColor: MaterialStateProperty.all(
-            CustomTheme.primary,
-          ),
-          foregroundColor: MaterialStateProperty.all(
-            CustomTheme.black3,
-          ),
+          onPressed: () {},
         ),
-        child: const CircularProgressIndicator(
-          valueColor: AlwaysStoppedAnimation<Color>(CustomTheme.black3),
-          strokeWidth: 2.5,
-        ),
-        onPressed: () {},
-      ),
-    );
-  }
+      );
 }

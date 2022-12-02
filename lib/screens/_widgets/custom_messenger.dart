@@ -1,15 +1,14 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
-
-import '../../config/custom_theme.dart';
+import 'package:px_test_task/config/custom_theme.dart';
 
 class CustomMessager {
   void showError({
     required BuildContext context,
     required String message,
-    duration = const Duration(seconds: 5),
+    Duration duration = const Duration(seconds: 5),
   }) {
-    Flushbar(
+    Flushbar<dynamic>(
       margin: CustomTheme.contentPadding,
       borderRadius: CustomTheme.borderRadius,
       flushbarPosition: FlushbarPosition.TOP,
